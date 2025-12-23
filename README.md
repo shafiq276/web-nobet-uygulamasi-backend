@@ -2,7 +2,7 @@
 
 # Web Tabanlı Nöbet Yönetim Sistemi - Backend API
 
-Bu proje, **Ondokuz Mayıs Üniversitesi Bilgisayar Mühendisliği** Bölümü Bitirme Projesi kapsamında geliştirilen **"Nöbet Asistanı"** uygulamasının sunucu tarafı (Backend) mimarisini oluşturmaktadır.
+Bu proje **"Nöbet Asistanı"** uygulamasının sunucu tarafı (Backend) mimarisini oluşturmaktadır.
 
 Frontend uygulamasına (Next.js) **RESTful API** servisleri sağlayarak; kimlik doğrulama, veri bütünlüğü, nöbet atama algoritmaları ve talep yönetim süreçlerini yönetir.
 
