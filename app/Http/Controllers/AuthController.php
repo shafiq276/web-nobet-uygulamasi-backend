@@ -23,8 +23,13 @@ class AuthController extends Controller
         ]);
 
         return response()->json([
+            'status' => true,
             'message' => 'User registered successfully',
-            'user' => $user
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ]
         ], 201);
     }
 
@@ -39,20 +44,27 @@ class AuthController extends Controller
 
         if (!$user || !Hash::check($validated['password'], $user->password)) {
             return response()->json([
+                'status' => false,
                 'message' => 'Invalid credentials'
             ], 401);
         }
 
         return response()->json([
+            'status' => true,
             'message' => 'Login successful',
-            'user' => $user
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ]
         ]);
     }
 
     public function logout(Request $request)
     {
         return response()->json([
-            'message' => 'Logout endpoint placeholder'
+            'status' => true,
+            'message' => 'Logout successful'
         ]);
     }
 }
